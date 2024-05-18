@@ -57,6 +57,7 @@
   cursor: pointer;
   border: none;
   position: relative;
+
   right: 10.5%;
 
 }
@@ -64,6 +65,7 @@
 .newsletter div button:hover {
   background-color: #454545;
   font-size: 12px;
+
 }
 
 .newsletter {
