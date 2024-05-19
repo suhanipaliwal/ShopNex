@@ -12,8 +12,10 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footer-logo">
-        <img src={footer_logo} alt="" />
-        <p className={`footer_${theme}`}>ShopNex</p>
+        <Link className="nav-logo-link" to="/">
+          <img src={footer_logo} alt="ShopNex Logo" />
+          <p className={`footer_${theme}`}>ShopNex</p>
+        </Link>
       </div>
       <ul className={"footer-links_" + theme}>
         <li>Company</li>
