@@ -16,6 +16,8 @@ import NotFound from "./Pages/NotFound";
 import ScrollToTop from "react-scroll-to-top";
 import { useContext, useEffect } from "react";
 import { ShopContext } from "./Context/ShopContext";
+import Collections from "./Pages/Collections";
+import Offers from "./Pages/Offers";
 function App() {
   const { theme } = useContext(ShopContext);
   return (
@@ -44,6 +46,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/offers" element={<Offers />} />
+          <Route path="/collections" element={<Collections />} />
         </Routes>
         <Footer />
       </BrowserRouter>
