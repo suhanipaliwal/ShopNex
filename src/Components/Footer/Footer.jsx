@@ -4,16 +4,26 @@ import footer_logo from "../Assets/logo_big.png";
 import instagram_icon from "../Assets/instagram_icon.png";
 import pintester_icon from "../Assets/pintester_icon.png";
 import whatsapp_icon from "../Assets/whatsapp_icon.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ShopContext } from "../../Context/ShopContext";
 
 const Footer = () => {
   const { theme } = useContext(ShopContext);
+  const location = useLocation();
+
+  const handleLogoClick = () => {
+    if (location.pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="footer">
       <div className="footer-logo">
-        <img src={footer_logo} alt="" />
-        <p className={`footer_${theme}`}>ShopNex</p>
+        <Link className="nav-logo-link" to="/" onClick={handleLogoClick}>
+          <img src={footer_logo} alt="ShopNex Logo" />
+          <p className={`footer_${theme}`}>ShopNex</p>
+        </Link>
       </div>
       <ul className={"footer-links_" + theme}>
         <li>Company</li>
