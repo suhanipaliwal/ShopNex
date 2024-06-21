@@ -7,6 +7,10 @@ import whatsapp_icon from "../Assets/whatsapp_icon.png";
 import { Link, useLocation } from "react-router-dom";
 import { ShopContext } from "../../Context/ShopContext";
 
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
 const Footer = () => {
   const { theme } = useContext(ShopContext);
   const location = useLocation();
@@ -31,13 +35,13 @@ const Footer = () => {
         <li>Offices</li>
         <li>
           {" "}
-          <Link className={`link_${theme}`} to="/about">
+          <Link className={`link_${theme}`} to="/about " onClick={scrollToTop}>
             About
           </Link>
         </li>
         <li>
           {" "}
-          <Link className={`link_${theme}`} to="/contact">
+          <Link className={`link_${theme}`} to="/contact" onClick={scrollToTop}>
             Contact Us
           </Link>
         </li>
